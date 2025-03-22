@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Urban City AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='Image.jpeg') }}" alt="Urban City AI Logo" class="logo">
+        <h1>Urban City AI</h1>
+    </header>
+    
+    <div class="main-container">
+        <div class="transit-section">
+            <h2>Public Transit Recommendations</h2>
+            <div id="transit-results"></div>
+        </div>
+        
+        <div class="chat-section">
+            <h2>Report Issues</h2>
+            <div id="chat-messages"></div>
+            <input type="text" id="user-input" placeholder="Type your concern...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+        
+        <div class="vision-section">
+            <h2>Navigation Assistant</h2>
+            <video id="camera-feed" autoplay></video>
+            <div id="detection-results"></div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
