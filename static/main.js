@@ -40,6 +40,8 @@ function sendMessage() {
 
 // Vision detection
 function detectObjects() {
+    const results = document.getElementById('detection-results');
+    results.innerHTML = 'Analyzing street view...';
     fetch('/detect', {
         method: 'POST'
     })
